@@ -598,6 +598,7 @@ client.on('message', message => {
             if (message.content.startsWith("xBrules")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
+.addField('     **@everyone** ' ,' **@here** ')
 .addField('     **اولا** ' ,' **ممنوع السب** ')
 .addField('     **ثانيا** ' ,' **لا تسوي سبام ** ')
 .addField('     **ثالثا** ' ,' **لا تزعج الاخرين** ')
