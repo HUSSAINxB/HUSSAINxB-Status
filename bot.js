@@ -422,7 +422,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
 
 
 client.on('message', message => {
-    if (message.content === "$roles") {
+    if (message.content === "xBroles") {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
         const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
@@ -594,4 +594,22 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 });
 
  
+client.on('message', message => {
+            if (message.content.startsWith("xBrules")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **اولا** ' ,' **ممنوع السب** ')
+.addField('     **ثانيا** ' ,' **لا تسوي سبام ** ')
+.addField('     **ثالثا** ' ,' **لا تزعج الاخرين** ')
+.addField('    **رابعا**' ,' **ممنوع الاعلانات** ')
+.addField('    **خامسا**' ,' **احترم الاخرين** ')
+.addField('    **سادسا**' ,' **لا تنشر في الشات او بل خاص** ')
+.addField('    **سابعا**' ,' **لا تنشر روابط!** ')
+.addField('    **ثامنا**' ,' **لا تسوي سبام ايموجي** ')
+.addField('    **تاسعا**' ,' **لا تطلب رتبه الاداره !** ')
+.setColor('#7d2dbe')
+  message.channel.sendEmbed(embed);
+    }
+});
+
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
