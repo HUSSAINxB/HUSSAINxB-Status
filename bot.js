@@ -536,12 +536,12 @@ client.on("message", (message) => {
     }
  
  
-  if (message.content.startsWith("$close")) {
+  if (message.content.startsWith("xbclose")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
-       message.channel.send(`هل انت متأكد من اقفالك للتذكرة اذا متأكد اكتب $confirm`)
+       message.channel.send(`هل انت متأكد من اقفالك للتذكرة اذا متأكد اكتب xbclose`)
            .then((m) => {
-               message.channel.awaitMessages(response => response.content === '$confirm', {
+               message.channel.awaitMessages(response => response.content === 'xbclose', {
                        max: 1,
                        time: 10000,
                        errors: ['time'],
@@ -610,6 +610,17 @@ client.on('message', message => {
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
+});
+
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : EX Clan`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`Hrlp? | xbhelp`,"http://twitch.tv/HUSSAINxB")
+client.user.setStatus("dnd")
 });
 
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
