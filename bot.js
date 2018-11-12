@@ -737,5 +737,6 @@ Dat = currentTime.getDate()
       time.setName(`${client.channels.size} <-- 『الرومات』 `);
  },1000);
   });
+     
 
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
