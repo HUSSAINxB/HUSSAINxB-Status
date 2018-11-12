@@ -71,7 +71,7 @@ message.author.send(`**مدة الرابط : يـوم
 
 
 client.on('message', message => {
-    if (message.content.startsWith("+avatar")) {
+    if (message.content.startsWith("$avatar")) {
         if (message.author.bot) return
         var mentionned = message.mentions.users.first();
     var omar;
