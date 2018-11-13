@@ -50,7 +50,7 @@ msg.delete();
 }
 });
 
-lient.on('message', message => {
+client.on('message', message => {
     if (message.content.startsWith("$hacked")) {
       if (message.author.bot) return
            message.delete();
