@@ -628,7 +628,7 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
  
 client.on('message', message => {
-            if (message.content.startsWith("xBrules")) {
+            if (message.content.startsWith("القوانين")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField('     **اولا** ' ,' **ممنوع السب** ')
