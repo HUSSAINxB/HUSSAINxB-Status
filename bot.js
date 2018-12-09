@@ -652,7 +652,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Night Server`,"http://twitch.tv/HUSSAINxB")
+client.user.setGame(`Night Server by HUSSAINxB,`,"http://twitch.tv/HUSSAINxB")
 client.user.setStatus("dnd")
 });
 
