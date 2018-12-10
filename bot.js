@@ -318,6 +318,13 @@ const prefix = "$";
 }
 });
 
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('519066236760621057').roles.find("name", "RINBOW").setColor("RANDOM");
+  };
+  setInterval(lol, 10000);
+});
+
 client.on('message', async message => {
   let args = message.content.split(" ");
   if(message.content.startsWith(prefix + "mute")) {
