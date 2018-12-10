@@ -201,6 +201,15 @@ if (message.content.startsWith("$cv")) {
 });
 
 
+client.on('message', message => {
+     if (message.content === "$servers") {
+         if(!message.channel.guild) return;
+     let embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .addField("**سيرفرات يلي البوت موجود فيها: **" , client.guilds.size)
+  message.channel.sendEmbed(embed);
+    }
+
 client.on('message',async message => {
     if(message.content.startsWith(prefix + "setVoice")) {
     if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply('❌ **ليس لديك الصلاحيات الكافية**');
